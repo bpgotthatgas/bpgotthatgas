@@ -44,14 +44,14 @@ export const discography: CreditRow[] = [
   },
   {
     id: 'brittney-carter-lose-sight',
-    year: '2026',
+    year: '2025',
     artist: 'Brittney Carter',
     release: 'Lose Sight – Single',
     role: 'Recording / Mixing',
   },
   {
     id: 'brittney-carter-shut-up-sit-down',
-    year: '2026',
+    year: '2025',
     artist: 'Brittney Carter',
     release: 'Shut Up, Sit Down – Single',
     role: 'Recording / Mixing',
