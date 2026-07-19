@@ -56,4 +56,11 @@ export const discography: CreditRow[] = [
     release: 'Shut Up, Sit Down – Single',
     role: 'Recording / Mixing',
   },
+  {
+    id: 'femdot-king-dilla-2',
+    year: '2025',
+    artist: 'femdot.',
+    release: 'King Dilla 2',
+    role: 'Assistant Engineer',
+  },
 ];
