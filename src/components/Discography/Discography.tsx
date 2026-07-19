@@ -5,7 +5,7 @@ import styles from './Discography.module.css';
 
 export function Discography() {
   return (
-    <section className={styles.section} aria-labelledby="discography-heading">
+    <section id="discography" className={styles.section} aria-labelledby="discography-heading">
       <div className={`container ${styles.grid}`}>
         <div className={styles.discographyCol}>
           <h2 id="discography-heading" className={styles.heading}>

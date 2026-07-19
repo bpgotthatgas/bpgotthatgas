@@ -10,9 +10,9 @@ const HERO_PORTRAIT_SRC = '/images/hero-portrait.jpg';
 export function Hero() {
   const [portraitFailed, setPortraitFailed] = useState(false);
 
-  const handleViewWork = (event: MouseEvent<HTMLAnchorElement>) => {
+  const handleViewDiscography = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
-    scrollToId('work');
+    scrollToId('discography');
   };
 
   return (
@@ -31,15 +31,17 @@ export function Hero() {
         <div className={styles.contentInner}>
           <h1 className={styles.heading}>BRANDON PORTER</h1>
           <p className={styles.body}>
-            chicago-based recording, mixing, and mastering engineer working
-            with independent artists and high-level studio sessions.
+            chicago-based recording, mixing, and mastering engineer at
+            classick studios. graduated from syracuse university in 2025 with
+            a master’s degree in audio engineering and has worked alongside
+            grammy-nominated artists. selected work below.
           </p>
           <a
-            href="#work"
+            href="#discography"
             className={styles.cta}
-            onClick={handleViewWork}
+            onClick={handleViewDiscography}
           >
-            VIEW SELECTED WORK
+            VIEW DISCOGRAPHY
           </a>
         </div>
       </div>
