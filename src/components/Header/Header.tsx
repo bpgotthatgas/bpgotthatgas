@@ -32,11 +32,13 @@ export function Header() {
           onClick={handleLogoClick}
           aria-label="Back to top"
         >
-          <img
-            src="/images/bp-logo-mark.png"
-            alt=""
-            className={styles.markImg}
-          />
+          <span className={styles.markBounce}>
+            <img
+              src="/images/bp-logo-mark.png"
+              alt=""
+              className={styles.markImg}
+            />
+          </span>
         </a>
         <nav className={styles.nav} aria-label="Primary">
           <ul className={styles.navList}>
