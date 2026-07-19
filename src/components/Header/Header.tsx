@@ -26,6 +26,18 @@ export function Header() {
         <a href="#top" className={styles.logo} onClick={handleLogoClick}>
           BP GOT THAT GAS
         </a>
+        <a
+          href="#top"
+          className={styles.markLink}
+          onClick={handleLogoClick}
+          aria-label="Back to top"
+        >
+          <img
+            src="/images/bp-logo-mark.png"
+            alt=""
+            className={styles.markImg}
+          />
+        </a>
         <nav className={styles.nav} aria-label="Primary">
           <ul className={styles.navList}>
             {NAV_LINKS.map((link) => (
