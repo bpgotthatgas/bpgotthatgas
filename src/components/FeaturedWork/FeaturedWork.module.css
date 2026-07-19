@@ -1,0 +1,100 @@
+.section {
+  background: var(--black);
+  padding: 96px 32px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 0.12em;
+  color: var(--white);
+  margin-bottom: 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.artworkWrap {
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--gunmetal);
+  overflow: hidden;
+}
+
+.artwork {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .artwork,
+.card:focus-within .artwork {
+  transform: scale(1.02);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .artwork {
+    transition: none;
+  }
+
+  .card:hover .artwork,
+  .card:focus-within .artwork {
+    transform: none;
+  }
+}
+
+.meta {
+  margin-top: 16px;
+}
+
+.artist {
+  font-size: 20px;
+  color: var(--white);
+}
+
+.title {
+  margin-top: 4px;
+  font-size: 16px;
+  color: var(--platinum);
+}
+
+.role {
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--steel);
+}
+
+.year {
+  margin-top: 2px;
+  font-size: 14px;
+  color: var(--steel);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 64px 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+}
