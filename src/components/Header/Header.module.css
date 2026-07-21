@@ -54,12 +54,13 @@
 .markImg {
   height: 44px;
   width: auto;
+  transform: rotate(2deg);
   transition: transform 0.25s ease;
 }
 
 .markLink:hover .markImg,
 .markLink:focus-visible .markImg {
-  transform: scale(1.1) rotate(-4deg);
+  transform: rotate(-2deg) scale(1.1);
 }
 
 .nav {
@@ -95,11 +96,15 @@
   }
 
   .logo {
-    font-size: 16px;
+    display: none;
   }
 
   .markLink {
-    display: none;
+    display: flex;
+  }
+
+  .markImg {
+    height: 40px;
   }
 
   .navList {

@@ -24,20 +24,6 @@ export function ListeningPanel() {
           <p className={styles.placeholder}>Apple Music Playlist Preview</p>
         )}
       </div>
-      {APPLE_MUSIC_PLAYLIST_URL ? (
-        <a
-          href={APPLE_MUSIC_PLAYLIST_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.button}
-        >
-          OPEN IN APPLE MUSIC
-        </a>
-      ) : (
-        <button type="button" className={styles.button} disabled>
-          OPEN IN APPLE MUSIC
-        </button>
-      )}
     </div>
   );
 }

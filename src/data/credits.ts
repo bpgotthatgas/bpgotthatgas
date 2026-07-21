@@ -8,18 +8,25 @@ export interface CreditRow {
 
 export const discography: CreditRow[] = [
   {
-    id: 'd-lylez-hidden-gems',
-    year: '2026',
-    artist: 'D. Lylez',
-    release: 'Hidden Gems',
-    role: 'Mixing / Mastering',
-  },
-  {
     id: 'brittney-carter-black-sheep-ep',
     year: '2026',
     artist: 'Brittney Carter',
     release: 'Black Sheep EP',
     role: 'Recording / Mixing',
+  },
+  {
+    id: 'brittney-carter-ride-4-u',
+    year: '2026',
+    artist: 'Brittney Carter',
+    release: 'ride 4 u – Single',
+    role: 'Recording / Mixing / Mastering',
+  },
+  {
+    id: 'd-lylez-hidden-gems',
+    year: '2026',
+    artist: 'D. Lylez',
+    release: 'Hidden Gems',
+    role: 'Mixing / Mastering',
   },
   {
     id: 'frayne-miss-me',

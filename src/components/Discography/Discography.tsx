@@ -18,7 +18,10 @@ export function Discography() {
           </ul>
         </div>
         <div className={styles.listenCol} aria-labelledby="listen-heading">
-          <h2 id="listen-heading" className={styles.heading}>
+          <h2
+            id="listen-heading"
+            className={`${styles.heading} ${styles.listenHeading}`}
+          >
             TAKE A LISTEN
           </h2>
           <ListeningPanel />

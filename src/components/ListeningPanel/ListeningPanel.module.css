@@ -3,12 +3,14 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  width: 100%;
+  max-width: 420px;
 }
 
 .panel {
   width: 100%;
-  max-width: 400px;
-  aspect-ratio: 4 / 3;
+  max-width: 420px;
+  height: 450px;
   background: var(--charcoal);
   border: 1px solid var(--gunmetal);
   display: flex;
@@ -26,30 +28,4 @@
   color: var(--steel);
   font-size: 18px;
   letter-spacing: 0.04em;
-}
-
-.button {
-  width: 100%;
-  max-width: 400px;
-  padding: 14px 28px;
-  background: var(--black);
-  color: var(--white);
-  border: 1px solid var(--gunmetal);
-  border-radius: 4px;
-  font-family: var(--font-display);
-  font-size: 16px;
-  letter-spacing: 0.08em;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.button:hover,
-.button:focus-visible {
-  background: var(--charcoal);
-}
-
-.button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
 }

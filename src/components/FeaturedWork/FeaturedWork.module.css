@@ -25,6 +25,7 @@
 .artworkWrap {
   aspect-ratio: 1 / 1;
   border: 1px solid var(--gunmetal);
+  border-radius: 8px;
   overflow: hidden;
 }
 
