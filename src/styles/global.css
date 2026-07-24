@@ -8,6 +8,10 @@
   --gunmetal: #44484d;
   --footer-gray: #979ca1;
 
+  --accent: #c1622e;
+  --accent-hover: #9c4d24;
+  --accent-moss: #6b7a4f;
+
   --font-display: 'Jersey 15', system-ui, sans-serif;
   --font-body: 'Jersey 15', system-ui, sans-serif;
 
@@ -92,7 +96,7 @@ ul {
 }
 
 :focus-visible {
-  outline: 2px solid var(--platinum);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 

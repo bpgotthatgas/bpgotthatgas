@@ -21,7 +21,15 @@
   display: none;
 }
 
+.centered {
+  text-align: center;
+}
+
 @media (max-width: 640px) {
+  .centered {
+    text-align: left;
+  }
+
   .row {
     grid-template-columns: 1fr 1fr;
     gap: 8px 16px;

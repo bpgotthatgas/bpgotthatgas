@@ -32,9 +32,7 @@ export function Hero() {
           <h1 className={styles.heading}>BRANDON PORTER</h1>
           <p className={styles.body}>
             chicago-based recording, mixing, and mastering engineer at
-            classick studios. graduated from syracuse university in 2025 with
-            a master’s degree in audio engineering and has worked alongside
-            grammy-nominated artists. selected work below.
+            classick studios. selected work below.
           </p>
           <a
             href="#discography"

@@ -1,5 +1,5 @@
 import type { MouseEvent } from 'react';
-import { APPLE_MUSIC_PLAYLIST_URL } from '../ListeningPanel';
+import { SPOTIFY_PLAYLIST_URL } from '../ListeningPanel';
 import { scrollToTop } from '../../utils/scroll';
 import styles from './Footer.module.css';
 
@@ -53,18 +53,18 @@ export function Footer() {
               )}
             </li>
             <li>
-              {APPLE_MUSIC_PLAYLIST_URL ? (
+              {SPOTIFY_PLAYLIST_URL ? (
                 <a
-                  href={APPLE_MUSIC_PLAYLIST_URL}
+                  href={SPOTIFY_PLAYLIST_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.link}
                 >
-                  Apple Music
+                  Spotify
                 </a>
               ) : (
                 <span className={styles.linkDisabled} aria-disabled="true">
-                  Apple Music (add link)
+                  Spotify (add link)
                 </span>
               )}
             </li>

@@ -3,10 +3,10 @@
   padding: 96px 80px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 65fr 35fr;
-  gap: 48px;
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .heading {
@@ -25,22 +25,7 @@
 .listenCol {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-}
-
-.listenHeading {
-  width: 100%;
-  max-width: 420px;
-}
-
-@media (max-width: 1280px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .listenCol {
-    align-items: center;
-  }
+  align-items: center;
 }
 
 @media (max-width: 640px) {

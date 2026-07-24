@@ -6,7 +6,7 @@ import styles from './Discography.module.css';
 export function Discography() {
   return (
     <section id="discography" className={styles.section} aria-labelledby="discography-heading">
-      <div className={`container ${styles.grid}`}>
+      <div className={`container ${styles.stack}`}>
         <div className={styles.discographyCol}>
           <h2 id="discography-heading" className={styles.heading}>
             FULL DISCOGRAPHY
@@ -18,10 +18,7 @@ export function Discography() {
           </ul>
         </div>
         <div className={styles.listenCol} aria-labelledby="listen-heading">
-          <h2
-            id="listen-heading"
-            className={`${styles.heading} ${styles.listenHeading}`}
-          >
+          <h2 id="listen-heading" className={styles.heading}>
             TAKE A LISTEN
           </h2>
           <ListeningPanel />

@@ -2,17 +2,72 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
   width: 100%;
   max-width: 420px;
 }
 
+.cassetteOuter {
+  position: relative;
+  width: 100%;
+}
+
+.cassette {
+  width: 100%;
+  background: var(--charcoal);
+  border: 2px solid var(--accent);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: var(--off-white);
+  padding: 12px 20px;
+}
+
+.labelText {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-display);
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  color: var(--black);
+  white-space: nowrap;
+}
+
+.recDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: recPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes recPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .recDot {
+    animation: none;
+  }
+}
+
 .panel {
   width: 100%;
-  max-width: 420px;
   height: 450px;
-  background: var(--charcoal);
-  border: 1px solid var(--gunmetal);
+  background: var(--black);
+  border-top: 1px solid var(--gunmetal);
   display: flex;
   align-items: center;
   justify-content: center;
