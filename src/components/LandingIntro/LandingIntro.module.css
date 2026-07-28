@@ -46,11 +46,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--off-white);
-  color: var(--black);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.3);
   font-family: var(--font-display);
   font-size: 16px;
   border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.key:hover,
+.key:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.key:active {
+  transform: scale(0.92);
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--white);
 }
 
 .screen {
@@ -76,7 +91,7 @@
 }
 
 .screenSub {
-  font-size: 14px;
+  font-size: 17px;
   letter-spacing: 0.06em;
   color: var(--white);
 }
@@ -162,7 +177,7 @@
   background: var(--off-white);
   color: var(--black);
   font-family: var(--font-display);
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 0.08em;
   border: none;
   border-radius: 0 0 10px 10px;
@@ -207,7 +222,7 @@
   }
 
   .screenSub {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .grades {

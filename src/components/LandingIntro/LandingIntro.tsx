@@ -14,6 +14,7 @@ const GRADES = [
 
 export function LandingIntro() {
   const [visible, setVisible] = useState(false);
+  const [enteredKeys, setEnteredKeys] = useState('');
   const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
@@ -57,6 +58,15 @@ export function LandingIntro() {
     setVisible(false);
   };
 
+  const handleKeyPress = (key: string) => {
+    setEnteredKeys((prev) => {
+      const next = prev + key;
+      const isValidCode = GRADES.some((grade) => grade.code === next.slice(-2));
+      if (isValidCode || next.length >= 3) dismiss();
+      return next;
+    });
+  };
+
   const transitionDuration = prefersReducedMotion ? 0 : 0.5;
 
   return (
@@ -84,16 +94,21 @@ export function LandingIntro() {
             />
 
             <div className={styles.pumpTop}>
-              <div className={styles.keypad} aria-hidden="true">
+              <div className={styles.keypad}>
                 {KEYPAD_KEYS.map((key) => (
-                  <span key={key} className={styles.key}>
+                  <button
+                    key={key}
+                    type="button"
+                    className={styles.key}
+                    onClick={() => handleKeyPress(key)}
+                  >
                     {key}
-                  </span>
+                  </button>
                 ))}
               </div>
               <div className={styles.screen}>
                 <p className={styles.screenSub}>
-                  select fuel grade to enter
+                  {enteredKeys || 'AWAITING SELECTION BELOW'}
                   <span className={styles.cursor} aria-hidden="true">
                     _
                   </span>
