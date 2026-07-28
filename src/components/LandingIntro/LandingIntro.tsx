@@ -108,7 +108,7 @@ export function LandingIntro() {
               </div>
               <div className={styles.screen}>
                 <p className={styles.screenSub}>
-                  {enteredKeys || 'AWAITING SELECTION BELOW'}
+                  {enteredKeys || 'AWAITING SELECTION'}
                   <span className={styles.cursor} aria-hidden="true">
                     _
                   </span>
