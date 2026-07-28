@@ -78,6 +78,7 @@
 @media (max-width: 640px) {
   .hero {
     grid-template-columns: 1fr;
+    min-height: 0;
   }
 
   .imagePanel {

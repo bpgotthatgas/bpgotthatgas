@@ -1,0 +1,176 @@
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.introImage {
+  background: var(--charcoal);
+  min-height: 340px;
+  overflow: hidden;
+}
+
+.introImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+
+.introContent {
+  background: var(--off-white);
+  display: flex;
+  align-items: center;
+  padding: 64px;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.heading {
+  font-size: 56px;
+  color: var(--black);
+  line-height: 1;
+}
+
+.subheading {
+  margin-top: 16px;
+  font-family: system-ui, sans-serif;
+  font-size: 20px;
+  color: var(--gunmetal);
+}
+
+.story {
+  background: var(--black);
+  padding: 96px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.paragraph {
+  width: 100%;
+  max-width: 680px;
+  font-family: system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--platinum);
+}
+
+.midImageRow {
+  width: 100%;
+  max-width: 680px;
+}
+
+.midImage {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: 50% 25%;
+  border-radius: 8px;
+  border: 1px solid var(--gunmetal);
+}
+
+.cta {
+  background: var(--off-white);
+  padding: 96px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+}
+
+.ctaHeading {
+  font-size: 32px;
+  letter-spacing: 0.06em;
+  color: var(--black);
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--accent);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid var(--accent);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.ctaButton:hover,
+.ctaButton:focus-visible {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+@media (max-width: 900px) {
+  .heading {
+    font-size: 44px;
+  }
+
+  .introContent {
+    padding: 48px;
+  }
+
+  .story {
+    padding: 72px 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .intro {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .introImage {
+    min-height: 340px;
+    height: 380px;
+  }
+
+  .introContent {
+    padding: 24px;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+
+  .subheading {
+    font-size: 17px;
+  }
+
+  .story {
+    padding: 64px 20px;
+    gap: 24px;
+  }
+
+  .paragraph {
+    font-size: 16px;
+  }
+
+  .midImage {
+    height: 260px;
+  }
+
+  .cta {
+    padding: 64px 20px;
+  }
+
+  .ctaHeading {
+    font-size: 24px;
+  }
+}

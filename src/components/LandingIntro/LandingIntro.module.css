@@ -1,0 +1,235 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.pump {
+  width: 100%;
+  max-width: 660px;
+  background: var(--charcoal);
+  border: 2px solid var(--gunmetal);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.brandMark {
+  height: 120px;
+  width: auto;
+  margin: 0 auto;
+}
+
+.pumpTop {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.key {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--off-white);
+  color: var(--black);
+  font-family: var(--font-display);
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.screen {
+  flex: 1;
+  background:
+    repeating-linear-gradient(
+      rgba(255, 255, 255, 0.025) 0px,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    radial-gradient(ellipse at center, rgba(255, 255, 255, 0.05), transparent 70%),
+    var(--black);
+  border: 1px solid var(--gunmetal);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.screenSub {
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: var(--white);
+}
+
+.cursor {
+  margin-left: 2px;
+  animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.grades {
+  display: flex;
+  gap: 20px;
+}
+
+.gradeCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.stripe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.octaneLabel {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(10, 10, 10, 0.65);
+}
+
+.accent {
+  --stripe-color: var(--accent);
+}
+
+.moss {
+  --stripe-color: var(--accent-moss);
+}
+
+.umber {
+  --stripe-color: var(--accent-umber);
+}
+
+.gradeCol .stripe {
+  background: var(--stripe-color);
+}
+
+.display {
+  width: 100%;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 14px 4px;
+  border-radius: 4px;
+}
+
+.gradeLabel {
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  text-align: center;
+}
+
+.pressButton {
+  width: 100%;
+  padding: 18px 4px;
+  background: var(--off-white);
+  color: var(--black);
+  font-family: var(--font-display);
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.pressButton:hover,
+.pressButton:focus-visible {
+  background: var(--platinum);
+}
+
+@media (max-width: 640px) {
+  .pump {
+    padding: 24px 20px;
+    gap: 24px;
+    border-radius: 16px;
+  }
+
+  .pumpTop {
+    gap: 12px;
+  }
+
+  .keypad {
+    display: none;
+  }
+
+  .brandMark {
+    height: 76px;
+  }
+
+  .octaneLabel {
+    font-size: 10px;
+  }
+
+  .screen {
+    padding: 16px;
+  }
+
+  .screenSub {
+    font-size: 12px;
+  }
+
+  .grades {
+    gap: 10px;
+  }
+
+  .stripe {
+    padding: 20px 8px;
+    gap: 12px;
+  }
+
+  .display {
+    font-size: 20px;
+    padding: 10px 4px;
+  }
+
+  .gradeLabel {
+    font-size: 11px;
+  }
+
+  .pressButton {
+    font-size: 12px;
+    padding: 14px 4px;
+  }
+}

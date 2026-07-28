@@ -1,33 +1,33 @@
 import type { MouseEvent } from 'react';
-import { scrollToId, scrollToTop } from '../../utils/scroll';
+import { Link, useLocation } from 'react-router-dom';
+import { scrollToTop } from '../../utils/scroll';
 import styles from './Header.module.css';
 
 const NAV_LINKS = [
-  { label: 'WORK', id: 'work' },
-  { label: 'BOOK', id: 'book' },
-  { label: 'CONTACT', id: 'contact' },
+  { label: 'WORK', to: '/#work' },
+  { label: 'ABOUT', to: '/about' },
+  { label: 'BOOK', to: '/#book' },
 ];
 
 export function Header() {
-  const handleLogoClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    scrollToTop();
-  };
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
-  const handleNavClick =
-    (id: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+  const handleLogoClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (isHome) {
       event.preventDefault();
-      scrollToId(id);
-    };
+      scrollToTop();
+    }
+  };
 
   return (
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
-        <a href="#top" className={styles.logo} onClick={handleLogoClick}>
+        <Link to="/" className={styles.logo} onClick={handleLogoClick}>
           BP GOT THAT GAS
-        </a>
-        <a
-          href="#top"
+        </Link>
+        <Link
+          to="/"
           className={styles.markLink}
           onClick={handleLogoClick}
           aria-label="Back to top"
@@ -39,18 +39,14 @@ export function Header() {
               className={styles.markImg}
             />
           </span>
-        </a>
+        </Link>
         <nav className={styles.nav} aria-label="Primary">
           <ul className={styles.navList}>
             {NAV_LINKS.map((link) => (
-              <li key={link.id}>
-                <a
-                  href={`#${link.id}`}
-                  className={styles.navLink}
-                  onClick={handleNavClick(link.id)}
-                >
+              <li key={link.label}>
+                <Link to={link.to} className={styles.navLink}>
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
